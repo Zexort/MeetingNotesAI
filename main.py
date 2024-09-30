@@ -10,7 +10,7 @@ def main(file_path):
     audio = load_audio(file_path)
 
     # Диаризация
-    diarization_model = SpeakerDiarization("pyannote/speaker-diarization-3.1", use_auth_token="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")
+    diarization_model = SpeakerDiarization("pyannote/speaker-diarization-3.1", use_auth_token="hg_token")  # Вписать токен с Hugging face
     diarization = diarization_model.diarize(file_path)
 
     # Транскрипция
