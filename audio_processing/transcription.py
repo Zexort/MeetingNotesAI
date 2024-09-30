@@ -1,4 +1,6 @@
+from sre_parse import Tokenizer
 import whisper
+from sumy.parsers.plaintext import PlaintextParser
 
 class AudioTranscriber:
     def __init__(self, model_name):
