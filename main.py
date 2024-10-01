@@ -10,7 +10,7 @@ def main(file_path):
     audio = load_audio(file_path)
 
     # Диаризация
-    diarization_model = SpeakerDiarization("pyannote/speaker-diarization-3.1", use_auth_token="hg_token")  # Вписать токен с Hugging face
+    diarization_model = SpeakerDiarization("pyannote/speaker-diarization-3.1", use_auth_token="HG_TOKEN")  # Вписать токен с Hugging face
     diarization = diarization_model.diarize(file_path)
 
     # Транскрипция
@@ -49,8 +49,8 @@ def main(file_path):
     print("\nОтветы на вопросы:")
     print(response)
 
-if __name__ == "__main__":
-    file_path = input("Введите путь до аудиофайла:")  # Укажите путь к вашему аудиофайлу
-    main(file_path)
-    torch.cuda.empty_cache()  # Очистка видеопамяти для дальнейшей работы с LLM
+
+file_path = input("Введите путь до аудиофайла:")  # Укажите путь к вашему аудиофайлу
+main(file_path)
+torch.cuda.empty_cache()  # Очистка видеопамяти для дальнейшей работы с LLM
 

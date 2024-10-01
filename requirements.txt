@@ -1,4 +1,4 @@
-torch
+# torch with cuda from https://pytorch.org/get-started/locally/
 transformers
 librosa
 pyannote.audio
