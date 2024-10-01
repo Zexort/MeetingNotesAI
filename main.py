@@ -26,6 +26,8 @@ def main(file_path):
         if text_segment and text_segment != "Продолжение следует...":
             speaker_number = speaker.split('_')[-1]
             dialogue += f"Speaker{speaker_number}: {text_segment}\n"
+            
+    print(dialogue)
 
     # Суммаризация
     summarizer = TextSummarizer()
